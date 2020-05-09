@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Input, View, List, ListItem } from '../components'
+import { Button, Input, View, List, ListItem, Text } from '../components'
 
 export const Todos = (props) => {
-  const { data, onAdd, onRemove } = props;
+  const { data, onAdd, onRemove, loading } = props;
   const [value, setValue] = useState('');
 
   const add = () => {
@@ -49,6 +49,18 @@ export const Todos = (props) => {
             data.map((item, index) => (
               <ListItem key={index} onCancel={remove(index)}>{item}</ListItem>
             ))
+          }
+          {
+            loading &&
+            <Text
+              style={{
+                alignSelf: 'center',
+                fontSize: 18,
+                padding: 10
+              }}
+            >
+              Loading...
+            </Text>
           }
         </List>
       </View>
