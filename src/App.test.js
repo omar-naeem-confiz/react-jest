@@ -1,7 +1,9 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import App from './App';
 import { ListItem } from './components';
+import { Todos } from './pages';
 
 jest.mock('./apis/todos.js');
 
@@ -16,7 +18,12 @@ it('renders without crashing', () => {
 });
 
 it('mount whole component with mocks', () => {
-  const wrapper = mount(<App />);
-  // expect(wrapper.find(ListItem)).toHaveLength(2);
-  expect(wrapper).toMatchSnapshot();
+  await act(() => {
+    const wrapper = mount(<App />);
+    expect(wrapper).toMatchSnapshot();
+    // adding an item
+    wrapper.find('input').simulate('change', { target: { value: 'item3' } });
+    wrapper.find('button').simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  })
 });

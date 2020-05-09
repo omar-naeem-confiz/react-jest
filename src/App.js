@@ -19,11 +19,13 @@ function App() {
     setData(response.data);
     setLoading(false);
   }
-  useEffect(async () => {
-    setLoading(true);
-    const response = await getList();
-    setData(response.data);
-    setLoading(false);
+  useEffect(() => {
+    (async () => {
+      setLoading(true);
+      const response = await getList();
+      setData(response.data);
+      setLoading(false);
+    })()
   }, [])
   return (
     <View

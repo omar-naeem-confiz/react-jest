@@ -5,6 +5,7 @@ export const ListItem = (props) => {
   const { children, style, onCancel } = props;
   return (
     <View
+      className="ListItem"
       style={{
         padding: 20,
         boxShadow: '0px 0px 3px 3px rgba(0,0,0,0.2)',
@@ -23,6 +24,7 @@ export const ListItem = (props) => {
         {children}
       </Text>
       <Text
+        className="cancelButton"
         style={{
           cursor: 'pointer',
           marginLeft: 20
