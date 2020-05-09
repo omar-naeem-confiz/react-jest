@@ -16,7 +16,7 @@ exports[`mount whole component with mocks 1`] = `
     >
       <Todos
         data={Array []}
-        loading={false}
+        loading={true}
         onAdd={[Function]}
         onRemove={[Function]}
       >
@@ -259,7 +259,43 @@ exports[`mount whole component with mocks 1`] = `
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "alignSelf": "center",
+                            "fontSize": 18,
+                            "padding": 10,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "center",
+                              "color": "rgba(0,0,0,0.87)",
+                              "fontSize": 18,
+                              "padding": 10,
+                            }
+                          }
+                        >
+                          <div
+                            style={
+                              Object {
+                                "alignSelf": "center",
+                                "color": "rgba(0,0,0,0.87)",
+                                "display": "flex",
+                                "flexDirection": "column",
+                                "fontSize": 18,
+                                "padding": 10,
+                              }
+                            }
+                          >
+                            Loading...
+                          </div>
+                        </View>
+                      </Text>
+                    </div>
                   </View>
                 </List>
               </div>
@@ -288,7 +324,7 @@ exports[`mount whole component with mocks 2`] = `
     >
       <Todos
         data={Array []}
-        loading={false}
+        loading={true}
         onAdd={[Function]}
         onRemove={[Function]}
       >
@@ -531,7 +567,43 @@ exports[`mount whole component with mocks 2`] = `
                           "width": "100%",
                         }
                       }
-                    />
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "alignSelf": "center",
+                            "fontSize": 18,
+                            "padding": 10,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignSelf": "center",
+                              "color": "rgba(0,0,0,0.87)",
+                              "fontSize": 18,
+                              "padding": 10,
+                            }
+                          }
+                        >
+                          <div
+                            style={
+                              Object {
+                                "alignSelf": "center",
+                                "color": "rgba(0,0,0,0.87)",
+                                "display": "flex",
+                                "flexDirection": "column",
+                                "fontSize": 18,
+                                "padding": 10,
+                              }
+                            }
+                          >
+                            Loading...
+                          </div>
+                        </View>
+                      </Text>
+                    </div>
                   </View>
                 </List>
               </div>

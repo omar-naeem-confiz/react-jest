@@ -18,12 +18,10 @@ it('renders without crashing', () => {
 });
 
 it('mount whole component with mocks', () => {
-  await act(() => {
-    const wrapper = mount(<App />);
-    expect(wrapper).toMatchSnapshot();
-    // adding an item
-    wrapper.find('input').simulate('change', { target: { value: 'item3' } });
-    wrapper.find('button').simulate('click');
-    expect(wrapper).toMatchSnapshot();
-  })
+  const wrapper = mount(<App />);
+  expect(wrapper).toMatchSnapshot();
+  // adding an item
+  wrapper.find('input').simulate('change', { target: { value: 'item3' } });
+  wrapper.find('button').simulate('click');
+  expect(wrapper).toMatchSnapshot();
 });
