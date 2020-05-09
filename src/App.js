@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View } from './components'
 import { Todos } from './pages';
+import { getList, addItem, removeItem } from './apis';
 
 function App() {
-  const [data, setData] = useState(JSON.parse(localStorage.getItem('list') || '[]'));
+  const [data, setData] = useState([]);
   const onAdd = (value) => {
-    const newList = [...data];
-    newList.push(value);
-    setData(newList);
-    localStorage.setItem('list', JSON.stringify(newList));
+    addItem(value).then((response) => {
+      setData(response.data);
+    });
   }
   const onRemove = (index) => {
-    const newList = [...data];
-    newList.splice(index, 1);
-    setData(newList);
-    localStorage.setItem('list', JSON.stringify(newList));
+    removeItem(index).then((response) => {
+      setData(response.data);
+    });
   }
+  useEffect(() => {
+    getList().then((response) => {
+      setData(response.data);
+    });
+  }, [])
   return (
     <View
       className="App"

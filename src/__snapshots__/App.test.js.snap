@@ -5,12 +5,7 @@ exports[`renders without crashing 1`] = `
   className="App"
 >
   <Todos
-    data={
-      Array [
-        "item1",
-        "item2",
-      ]
-    }
+    data={Array []}
     onAdd={[Function]}
     onRemove={[Function]}
   />
