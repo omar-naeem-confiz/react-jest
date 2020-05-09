@@ -3,14 +3,16 @@ import { mount } from 'enzyme';
 import { Button } from '.';
 
 it('render Button', () => {
+  let recorderEvent;
   const wrapper = mount(
     <Button
       label="Add"
       onClick={() => {
-        expect(1).toBe(1)
+        recorderEvent = 'click'
       }}
     />
   );
   expect(wrapper).toMatchSnapshot();
-  wrapper.find('button').simulate('click')
+  wrapper.find('button').simulate('click');
+  expect(recorderEvent).toBe('click');
 });

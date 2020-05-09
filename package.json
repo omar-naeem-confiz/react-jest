@@ -15,6 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "npm test -- --coverage",
     "test:CI": "npm test -- --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
@@ -50,10 +51,13 @@
       }
     },
     "collectCoverageFrom": [
-      "**/*.js",
-      "!**/node_modules/**",
-      "!src/setupTests.js",
-      "!src/serviceWorker.js"
+      "**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "src/index.js",
+      "src/setupTests.js",
+      "src/serviceWorker.js",
+      "/node_modules/"
     ]
   }
 }
