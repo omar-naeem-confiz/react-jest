@@ -7,26 +7,23 @@ function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const onAdd = (value) => {
+  const onAdd = async (value) => {
     setLoading(true);
-    addItem(value).then((response) => {
-      setData(response.data);
-      setLoading(false);
-    });
+    const response = await addItem(value);
+    setData(response.data);
+    setLoading(false);
   }
-  const onRemove = (index) => {
+  const onRemove = async (index) => {
     setLoading(true);
-    removeItem(index).then((response) => {
-      setData(response.data);
-      setLoading(false);
-    });
+    const response = await removeItem(index);
+    setData(response.data);
+    setLoading(false);
   }
-  useEffect(() => {
+  useEffect(async () => {
     setLoading(true);
-    getList().then((response) => {
-      setData(response.data);
-      setLoading(false);
-    });
+    const response = await getList();
+    setData(response.data);
+    setLoading(false);
   }, [])
   return (
     <View
