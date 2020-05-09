@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Button 1`] = `
+<Button
+  label="Add"
+  onClick={[Function]}
+>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#017acd",
+        "borderRadius": 6,
+        "height": 54,
+        "minWidth": 127,
+        "padding": 10,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "color": "white",
+              "display": "flex",
+              "flexDirection": "column",
+              "fontSize": 16,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Add
+        </div>
+      </View>
+    </Text>
+  </button>
+</Button>
+`;
