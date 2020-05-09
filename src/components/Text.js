@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from '.';
 
 export const Text = (props) => {
-  const { children, style } = props;
+  const { children, style, ...rest } = props;
   return (
     <View
       style={{
@@ -10,6 +10,7 @@ export const Text = (props) => {
         fontSize: 16,
         ...style
       }}
+      {...rest}
     >
       {children}
     </View>
