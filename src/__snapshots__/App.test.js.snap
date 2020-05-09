@@ -507,7 +507,7 @@ exports[`mount whole component with mocks 2`] = `
           Array [
             "item1",
             "item2",
-            "",
+            "item3",
           ]
         }
         loading={false}
@@ -1021,7 +1021,9 @@ exports[`mount whole component with mocks 2`] = `
                                       "fontSize": 16,
                                     }
                                   }
-                                />
+                                >
+                                  item3
+                                </div>
                               </View>
                             </Text>
                             <Text
@@ -1098,7 +1100,7 @@ exports[`mount whole component with mocks 3`] = `
         data={
           Array [
             "item2",
-            "",
+            "item3",
           ]
         }
         loading={false}
@@ -1507,7 +1509,9 @@ exports[`mount whole component with mocks 3`] = `
                                       "fontSize": 16,
                                     }
                                   }
-                                />
+                                >
+                                  item3
+                                </div>
                               </View>
                             </Text>
                             <Text
