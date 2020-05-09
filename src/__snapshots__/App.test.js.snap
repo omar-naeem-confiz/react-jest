@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<View
+  className="App"
+>
+  <Todos
+    data={
+      Array [
+        "item1",
+        "item2",
+      ]
+    }
+    onAdd={[Function]}
+    onRemove={[Function]}
+  />
+</View>
+`;
