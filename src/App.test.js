@@ -38,7 +38,7 @@ it('mount whole component with mocks', async () => {
   wrapper.update();
   expect(wrapper).toMatchSnapshot();
   expect(wrapper.find(ListItem)).toHaveLength(3);
-  expect(wrapper.find(ListItem).at(2).find(Text).at(0).text()).toBe('item3')
+  expect(wrapper.find(ListItem).last().find(Text).first().text()).toBe('item3')
 
   // removing last item
   await act(() => {

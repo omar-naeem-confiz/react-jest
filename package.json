@@ -15,8 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "npm test -- --coverage",
-    "test:CI": "npm test -- --coverage --watchAll=false",
+    "test:CI": "npm test -- --coverage --watchAll=false --silent",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -58,7 +57,10 @@
       "src/index.js",
       "src/setupTests.js",
       "src/serviceWorker.js",
-      "/node_modules/"
+      "/node_modules/",
+      "src/components/index.js",
+      "src/pages/index.js",
+      "src/apis/index.js"
     ]
   }
 }
