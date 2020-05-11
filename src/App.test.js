@@ -12,11 +12,6 @@ beforeEach(() => {
   localStorage.setItem('list', "[\"item1\", \"item2\"]");
 });
 
-it('renders without crashing', () => {
-  const wrapper = shallow(<App />);
-  expect(wrapper).toMatchSnapshot();
-});
-
 it('mount whole component with mocks', async () => {
   let wrapper;
   await act(() => {

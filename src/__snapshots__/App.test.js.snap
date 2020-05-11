@@ -1569,16 +1569,3 @@ exports[`mount whole component with mocks 3`] = `
   </View>
 </App>
 `;
-
-exports[`renders without crashing 1`] = `
-<View
-  className="App"
->
-  <Todos
-    data={Array []}
-    loading={false}
-    onAdd={[Function]}
-    onRemove={[Function]}
-  />
-</View>
-`;
